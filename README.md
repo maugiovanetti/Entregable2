@@ -8,7 +8,7 @@ El código se divide en las siguientes secciones:
 ## Requisitos
 
 - Python 3.x.
-- Las bibliotecas `PySpar`, `googletrans==4.0.0-rc1` y `psycopg2` instaladas. 
+- Las bibliotecas `pyspark`, `googletrans==4.0.0-rc1` y `psycopg2` instaladas. 
 
 
 
@@ -50,7 +50,7 @@ provincias = ["Buenos Aires", "Córdoba", "Santa Fe", "Mendoza", "Tucumán", "Pa
 ```
 
 ### 5. Obtención y procesamiento de los datos climáticos
-En esta sección, se itera sobre la lista de provincias y se realiza una solicitud a la API de OpenWeatherMap para obtener los datos climáticos de cada provincia. Los datos se almacenan en formato JSON y se procesan para extraer la información relevante.
+En esta sección, se itera sobre la lista de provincias y se realiza una solicitud a la API de OpenWeatherMap para obtener los datos climáticos de cada provincia. Los datos se almacenan en formato JSON y se procesan para extraer la información relevante, a la vez se procede a la trasnfromacion de la descripcion al idioma españal y a expresar como porcentaje los datos obetenidos por humedad.
 
 ```python
 
