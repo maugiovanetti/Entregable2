@@ -2,7 +2,6 @@
 ## Descripción del Código
 El código proporcionado es un script en Python que utiliza PySpark y la API de OpenWeatherMap para obtener datos climáticos de diferentes provincias de Argentina. Luego, almacena estos datos en una tabla de Amazon Redshift.
 
-El código se divide en las siguientes secciones:
 
 
 ## Requisitos
