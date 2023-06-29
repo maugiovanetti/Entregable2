@@ -2,11 +2,29 @@
 
 El código proporcionado es un script en Python que utiliza PySpark y la API de OpenWeatherMap para obtener datos climáticos de diferentes provincias de Argentina. Luego, almacena estos datos en una tabla de Amazon Redshift.
 
-### Requisitos
+
+
+## Requisitos
 
 - Python 3.x.
 - Las bibliotecas `PySpar`, `googletrans==4.0.0-rc1` y `psycopg2` instaladas. 
 
+
+## Pasos para ejecutar el código
+
+###1. Importación de bibliotecas
+En esta sección, se importan las bibliotecas necesarias para el código.
+```Python
+from pyspark.sql.types import StructType, StructField, StringType, DoubleType, IntegerType
+from googletrans import Translator
+import psycopg2
+from psycopg2 import sql
+
+```
+
+
+### 2. Creación de una instancia de SparkSession
+En esta sección, se crea una instancia de SparkSession utilizando SparkSession.builder.getOrCreate().
 
 
 
