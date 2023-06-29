@@ -40,7 +40,7 @@ api_key = "cb3c7af6f8a3112d069b2cd42e3d2651"
 
 ```
 ### 4. Definición de las provincias
-Se define una lista llamada provincias que contiene las provincias de Argentina para las cuales se obtendrán los datos climáticos. Los datos elegidos fueraon de provincias Argentinas, pero podrían alterarse en caso de ser necesario.
+Se define una lista llamada provincias que contiene las provincias de Argentina para las cuales se obtendrán los datos climáticos. Los datos elegidos fueron de provincias Argentinas, pero podrían alterarse en caso de ser necesario.
 
 ```python
 
@@ -85,7 +85,7 @@ datos_clima.append(dato_clima)
 ```
 
 ### 6. Creación y visualización del DataFrame
-En esta sección, se define el esquema del DataFrame utilizando StructType y StructField. Luego, se crea el DataFrame utilizando el esquema y los datos climáticos obtenidos. Finalmente, se muestra el DataFrame por pantalla utilizando dataframe.show().
+Se define el esquema del DataFrame utilizando StructType y StructField. Luego, se crea el DataFrame utilizando el esquema y los datos climáticos obtenidos. Finalmente, se muestra el DataFrame por pantalla utilizando dataframe.show().
 
 
 ```python
@@ -112,7 +112,7 @@ dataframe.show(dataframe.count(), truncate=False)
 ```
 
 ### 7. Conexión a Amazon Redshift y creación de la tabla
-En esta sección, se establecen los datos de conexión a Amazon Redshift, como el host, puerto, base de datos, usuario, contraseña y esquema. Luego, se crea una conexión a Amazon Redshift y se crea una tabla utilizando SQL con el comando CREATE TABLE IF NOT EXISTS.
+Se establecen los datos de conexión a Amazon Redshift, como el host, puerto, base de datos, usuario, contraseña y esquema. Luego, se crea una conexión a Amazon Redshift y se crea una tabla utilizando SQL con el comando CREATE TABLE IF NOT EXISTS.
 
 ```python
 
@@ -156,7 +156,7 @@ cursor.execute(create_table_query)
 conn.commit()
 ```
 ### 8. Inserción de datos en la tabla
-En esta sección, se insertan los datos climáticos en la tabla de Amazon Redshift. Se verifica si los datos ya existen en la tabla antes de realizar la inserción.
+Se insertan los datos climáticos en la tabla de Amazon Redshift. Se verifica si los datos ya existen en la tabla antes de realizar la inserción.
 
 ```python
 
@@ -187,7 +187,7 @@ for dato_clima in datos_clima:
 
 
 ### 9. Cierre de la conexión
-En esta sección, se cierra el cursor y la conexión a Amazon Redshift.
+Se cierra el cursor y la conexión a Amazon Redshift.
 
 ```python
 
