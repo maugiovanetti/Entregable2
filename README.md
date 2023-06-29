@@ -16,7 +16,7 @@ El código proporcionado es un script en Python que utiliza PySpark y la API de 
 En esta sección, se importan las bibliotecas necesarias para el código, como pyspark.sql, googletrans y psycopg2. Estas bibliotecas proporcionan funcionalidades adicionales para trabajar con Spark, traducción de texto y conexión a bases de datos PostgreSQL, respectivamente.
 
 ```python
-Copy code
+
 from pyspark.sql.types import StructType, StructField, StringType, DoubleType, IntegerType
 from googletrans import Translator
 import psycopg2
