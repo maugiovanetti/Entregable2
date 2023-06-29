@@ -1,30 +1,16 @@
 Descripción del Código
 El código proporcionado es un script en Python que utiliza PySpark y la API de OpenWeatherMap para obtener datos climáticos de diferentes provincias de Argentina. Luego, almacena estos datos en una tabla de Amazon Redshift.
 
-Requisitos
-Python 3.x instalado en tu sistema.
-Las bibliotecas PySpark, googletrans y psycopg2 instaladas. Puedes instalarlas usando pip:
-Copy code
-pip install pyspark googletrans psycopg2
-Una API key válida de OpenWeatherMap. Puedes obtenerla registrándote en su sitio web.
-Acceso a Internet para realizar solicitudes a la API de OpenWeatherMap.
-Una cuenta de Amazon Redshift con una base de datos y esquema existente.
-Los datos de conexión a Amazon Redshift, incluyendo el host, puerto, nombre de la base de datos, usuario, contraseña y nombre del esquema donde se creará la tabla.
-Pasos para ejecutar el código
-Configuración:
+El código se divide en las siguientes secciones:
 
-Obtén una API key de OpenWeatherMap y reemplaza la variable api_key en el código con tu propia clave.
-Verifica y actualiza la lista de provincias en la variable provincias si es necesario.
-Reemplaza los valores de las variables host, port, database, user, password y schema con tu propia información de conexión a Amazon Redshift.
-Instalación de dependencias:
+1. Importación de bibliotecas
+En esta sección, se importan las bibliotecas necesarias para el código, como pyspark.sql, googletrans y psycopg2. Estas bibliotecas proporcionan funcionalidades adicionales para trabajar con Spark, traducción de texto y conexión a bases de datos PostgreSQL, respectivamente.
 
-Asegúrate de tener instaladas todas las bibliotecas requeridas. Puedes instalarlas usando pip:
-Copy code
-pip install pyspark googletrans psycopg2
-Ejecución:
+```python
+from pyspark.sql.types import StructType, StructField, StringType, DoubleType, IntegerType
+from googletrans import Translator
+import psycopg2
+from psycopg2 import sql '''
 
-Ejecuta el código en un entorno de PySpark con acceso a Internet.
-Resultado:
-
-El script mostrará por pantalla el DataFrame generado con los datos climáticos de cada provincia.
-Los datos se insertarán en la tabla especificada en Amazon Redshift.
+2. Creación de una instancia de SparkSession
+En esta sección, se crea una instancia de SparkSession utilizando SparkSession.builder.getOrCreate(). SparkSession es la entrada principal para interactuar con Spark y permite ejecutar operaciones en un entorno distribuido.
