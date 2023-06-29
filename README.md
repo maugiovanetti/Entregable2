@@ -13,7 +13,7 @@ El código proporcionado es un script en Python que utiliza PySpark y la API de 
 
 
 ### 1. Importación de bibliotecas
-En esta sección, se importan las bibliotecas necesarias para el código, como pyspark.sql, googletrans y psycopg2. Estas bibliotecas proporcionan funcionalidades adicionales para trabajar con Spark, traducción de texto y conexión a bases de datos PostgreSQL, respectivamente.
+Se importan las bibliotecas necesarias para el código, como pyspark.sql, googletrans y psycopg2. Estas bibliotecas proporcionan funcionalidades adicionales para trabajar con Spark, traducción de texto y conexión a bases de datos PostgreSQL, respectivamente.
 
 ```python
 
@@ -24,7 +24,7 @@ from psycopg2 import sql
 ```
 
 ### 2. Creación de una instancia de SparkSession
-En esta sección, se crea una instancia de SparkSession utilizando SparkSession.builder.getOrCreate(). SparkSession es la entrada principal para interactuar con Spark y permite ejecutar operaciones en un entorno distribuido.
+Se crea una instancia de SparkSession utilizando SparkSession.builder.getOrCreate(). 
 
 ```python
 spark = SparkSession.builder.getOrCreate()
@@ -32,7 +32,7 @@ spark = SparkSession.builder.getOrCreate()
 ```
 
 ### 3. Configuración de la API key de OpenWeatherMap
-En esta sección, se define la API key de OpenWeatherMap en la variable api_key. Esta clave es necesaria para realizar solicitudes a la API y obtener los datos climáticos.
+Se define la API key de OpenWeatherMap en la variable api_key. Esta clave es necesaria para realizar solicitudes a la API y obtener los datos climáticos. La API presenta una limitación de hasta 1000 consultas al dia.
 
 ```python
 
@@ -40,7 +40,7 @@ api_key = "cb3c7af6f8a3112d069b2cd42e3d2651"
 
 ```
 ### 4. Definición de las provincias
-En esta sección, se define una lista llamada provincias que contiene las provincias de Argentina para las cuales se obtendrán los datos climáticos. Puedes modificar esta lista según tus necesidades.
+Se define una lista llamada provincias que contiene las provincias de Argentina para las cuales se obtendrán los datos climáticos. Los datos elegidos fueraon de provincias Argentinas, pero podrían alterarse en caso de ser necesario.
 
 ```python
 
@@ -49,7 +49,7 @@ provincias = ["Buenos Aires", "Córdoba", "Santa Fe", "Mendoza", "Tucumán", "Pa
 ```
 
 ### 5. Obtención y procesamiento de los datos climáticos
-En esta sección, se itera sobre la lista de provincias y se realiza una solicitud a la API de OpenWeatherMap para obtener los datos climáticos de cada provincia. Los datos se almacenan en formato JSON y se procesan para extraer la información relevante, a la vez se procede a la trasnfromacion de la descripcion al idioma españal y a expresar como porcentaje los datos obetenidos por humedad.
+Se itera sobre la lista de provincias y se realiza una solicitud a la API de OpenWeatherMap para obtener los datos climáticos de cada provincia. Los datos se almacenan en formato JSON y se procesan para extraer la información relevante, a la vez, se realiza la trasnfromacion de los datos almacendos como "descripción" al idioma Español y se expresan como porcentaje los datos obetenidos por humedad.
 
 ```python
 
