@@ -4,14 +4,11 @@ El código proporcionado es un script en Python que utiliza PySpark y la API de 
 
 ### Requisitos
 
-- Python 3.x instalado en tu sistema.
-- Las bibliotecas PySpark, googletrans y psycopg2 instaladas. Puedes instalarlas usando `pip`:
+- Python 3.x.
+- Las bibliotecas `PySpar`, `googletrans==4.0.0-rc1` y `psycopg2` instaladas. 
 
 
-- Una API key válida de OpenWeatherMap. Puedes obtenerla registrándote en su sitio web.
-- Acceso a Internet para realizar solicitudes a la API de OpenWeatherMap.
-- Una cuenta de Amazon Redshift con una base de datos y esquema existente.
-- Los datos de conexión a Amazon Redshift, incluyendo el host, puerto, nombre de la base de datos, usuario, contraseña y nombre del esquema donde se creará la tabla.
+
 
 ### Pasos para ejecutar el código
 
