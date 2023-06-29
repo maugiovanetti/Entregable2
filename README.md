@@ -65,7 +65,8 @@ Copy code
 from pyspark.sql.types import StructType, StructField, StringType, DoubleType, IntegerType
 from googletrans import Translator
 import psycopg2
-from psycopg2 import sql ```
+from psycopg2 import sql
+```
 
 ### 2. Creación de una instancia de SparkSession
 En esta sección, se crea una instancia de SparkSession utilizando SparkSession.builder.getOrCreate(). SparkSession es la entrada principal para interactuar con Spark y permite ejecutar operaciones en un entorno distribuido.
@@ -124,11 +125,16 @@ for provincia in provincias:
 )
 
 datos_clima.append(dato_clima)
+
+
+```
+
 ### 6. Creación y visualización del DataFrame
 En esta sección, se define el esquema del DataFrame utilizando StructType y StructField. Luego, se crea el DataFrame utilizando el esquema y los datos climáticos obtenidos. Finalmente, se muestra el DataFrame por pantalla utilizando dataframe.show().
 
-python
-Copy code
+
+```python
+
 esquema = StructType([
     StructField("ID", IntegerType(), nullable=False),
     StructField("longitud", DoubleType(), nullable=True),
@@ -220,7 +226,9 @@ for dato_clima in datos_clima:
         cursor.execute(insert_query, dato_clima)
         conn.commit()
     else:
-        print("Los datos con ID {} ya existen en la tabla.".format(id_clima))```
+        print("Los datos con ID {} ya existen en la tabla.".format(id_clima))
+
+```
 
 
 ### 9. Cierre de la conexión
